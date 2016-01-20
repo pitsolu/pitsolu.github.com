@@ -34,9 +34,8 @@
                 data: {
                         "name":$("#name").val(),
                         "_replyto":$("#email").val(),
-                        "subject":$("#subject").val(),
-                        "message":$("#message").val(),
-                        // "_gotcha":$("_gotcha").val()
+                        "_subject":$("#subject").val(),
+                        "message":$("#message").val()
                     },
                 dataType: "json"
             })
