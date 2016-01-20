@@ -35,10 +35,21 @@
                         "name":$("#name").val(),
                         "_replyto":$("email").val(),
                         "subject":$("subject").val(),
-                        "message":$("message").val(),
+                        "message":$("message").html(),
                         // "_gotcha":$("_gotcha").val()
                     },
                 dataType: "json"
+            })
+            .success(function(){
+
+                $("#name").val("");
+                $("email").val();
+                $("subject").val();
+                $("message").html()
+            })
+            .fail(function(){
+
+                alert("Something went wrong!");
             });
     });
 
