@@ -35,7 +35,7 @@
                         "name":$("#name").val(),
                         "_replyto":$("email").val(),
                         "subject":$("subject").val(),
-                        "message":$("message").html(),
+                        "message":$("message").val(),
                         // "_gotcha":$("_gotcha").val()
                     },
                 dataType: "json"
@@ -43,9 +43,9 @@
             .success(function(){
 
                 $("#name").val("");
-                $("email").val();
-                $("subject").val();
-                $("message").html()
+                $("#email").val("");
+                $("#subject").val("");
+                $("#message").val("");
             })
             .fail(function(){
 
