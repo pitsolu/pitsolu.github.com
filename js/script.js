@@ -33,9 +33,9 @@
                 method: "POST",
                 data: {
                         "name":$("#name").val(),
-                        "_replyto":$("email").val(),
-                        "subject":$("subject").val(),
-                        "message":$("message").val(),
+                        "_replyto":$("#email").val(),
+                        "subject":$("#subject").val(),
+                        "message":$("#message").val(),
                         // "_gotcha":$("_gotcha").val()
                     },
                 dataType: "json"
