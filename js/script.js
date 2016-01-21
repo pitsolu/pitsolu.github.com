@@ -26,7 +26,12 @@
 
     $("#send").click(function(e){
 
-            e.preventDefault();
+        e.preventDefault();
+
+        if(!!$("#name").val() &&
+            !!$("#email").val() &&
+            !!$("#subject").val() &&
+            !!$("#message").val()){
 
             $.ajax({
                 url: "http://formspree.io/pitsolu@gmail.com",
@@ -45,11 +50,23 @@
                 $("#email").val("");
                 $("#subject").val("");
                 $("#message").val("");
+
+                smoke.signal("Thanks you feedback has been submitted.", function(e){}, {
+
+                    duration: 3000,
+                    classname: "custom-class"
+                });
             })
             .fail(function(){
 
-                alert("Something went wrong!");
+                smoke.signal("Something went wrong!!!", function(e){}, {
+                    
+                    duration: 3000,
+                    classname: "custom-class"
+                });
             });
+        }
+        // else console.log("Empty Form!!!");
     });
 
 })();
