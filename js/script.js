@@ -77,7 +77,7 @@
                     $("#subject").val("");
                     $("#message").val("");
 
-                    smoke.signal("Thanks you feedback has been submitted.", function(e){}, {
+                    smoke.signal("Thanks you. Your feedback has been submitted.", function(e){}, {
 
                         duration: 3000,
                         classname: "custom-class"
