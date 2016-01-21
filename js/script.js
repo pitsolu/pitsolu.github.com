@@ -1,5 +1,10 @@
 (function() {
 
+    $("form").submit(function(e){
+        
+        e.preventDefault();
+    });
+
     $.routr.add("home", function(id){
 
         $(".content-body .container .row main").remove();
@@ -25,8 +30,6 @@
     });
 
     $("#send").click(function(e){
-
-        e.preventDefault();
 
         if(!!$("#name").val() &&
             !!$("#email").val() &&
