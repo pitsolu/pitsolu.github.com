@@ -1,7 +1,7 @@
 (function() {
 
     $("form").submit(function(e){
-        
+
         e.preventDefault();
     });
 
@@ -37,6 +37,7 @@
             !!$("#message").val()){
 
             $.ajax({
+                
                 url: "http://formspree.io/pitsolu@gmail.com",
                 method: "POST",
                 data: {
