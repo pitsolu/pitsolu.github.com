@@ -1,8 +1,11 @@
 (function() {
 
-    $("form").submit(function(e){
+    $(document).ready(function() {
 
-        e.preventDefault();
+        $("form").submit(function(e){
+
+            e.preventDefault();
+        });
     });
 
     $.routr.add("home", function(id){
@@ -37,7 +40,7 @@
             !!$("#message").val()){
 
             $.ajax({
-                
+
                 url: "http://formspree.io/pitsolu@gmail.com",
                 method: "POST",
                 data: {
