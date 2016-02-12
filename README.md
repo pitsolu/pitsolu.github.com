@@ -8,3 +8,4 @@
 3. [pace](http://github.hubspot.com/pace/docs/welcome) - progress bar
 4. [mordernizr](https://modernizr.com) - browser feature detection
 5. [bootstrap](http://getbootstrap.com) - responsivity framework
+6. [lity](http://sorgalla.com/lity) - light responsive lightbox

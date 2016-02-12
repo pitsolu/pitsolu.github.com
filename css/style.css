@@ -78,3 +78,33 @@ div#site-header{
 	padding: 4px 14px 4px 14px; 
 	line-height: 40px 
 }
+
+.gallery{
+
+	text-align: center;
+}
+
+.gallery ul li{
+
+	list-style-type: none;
+	display: inline;
+	/*padding:10px;*/
+}
+
+
+.gallery a{
+
+	font-weight: bold;
+	text-decoration: underline;
+	color: blue;
+}
+
+.gallery ul li a img{
+
+   padding:10px;
+}
+
+.gallery ul li a img:hover{
+
+	cursor: pointer;
+}

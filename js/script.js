@@ -6,6 +6,14 @@
         return pattern.test(emailAddress);
     };
 
+    $.routr.add("portfolio", function(id){
+
+        $(".content-body .container .row main").remove();
+        $(".content-body .container .row").prepend($("#portfolio").html());
+        $("#left-bar").hide();
+        $("#main-nav").hide();
+    });
+
     $.routr.add("home", function(id){
 
         $(".content-body .container .row main").remove();
