@@ -32,7 +32,7 @@
         $("#left-bar").hide();
         $("#main-nav").hide();
 
-        $(".loading").pulse();
+        $(".loading").pulse(times:0, duration: 300);
 
         $("img.lazy").lazyload({
 
