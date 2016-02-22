@@ -17,6 +17,11 @@
 
             effect : "fadeIn"
         });
+
+        $(".gallery ul li a img").on("load", function() {
+          
+            $(".loading").hide();
+        })
     });
 
     $.routr.add("home", function(id){
