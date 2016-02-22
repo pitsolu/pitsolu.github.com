@@ -12,6 +12,13 @@
         $(".content-body .container .row").prepend($("#portfolio").html());
         $("#left-bar").hide();
         $("#main-nav").hide();
+
+        // $(".gallery ul li a img").hide();
+
+        // $(".gallery ul li a img").on("load", function(){
+
+        //     $(this).show();
+        // })
     });
 
     $.routr.add("home", function(id){
@@ -104,6 +111,8 @@
 
     $.routr.execute("home");
     $.routr.run();
+
+    $(".gallery ul li a img").unveil();
 
     $("#trigger-overlay").click(function(){
 
