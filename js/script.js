@@ -13,12 +13,10 @@
         $("#left-bar").hide();
         $("#main-nav").hide();
 
-        // $(".gallery ul li a img").hide();
+        $("img.lazy").lazyload({
 
-        // $(".gallery ul li a img").on("load", function(){
-
-        //     $(this).show();
-        // })
+            effect : "fadeIn"
+        });
     });
 
     $.routr.add("home", function(id){
@@ -111,9 +109,6 @@
 
     $.routr.execute("home");
     $.routr.run();
-
-    // $(".gallery ul li a img").unveil();
-    $("img.lazy").lazyload();
 
     $("#trigger-overlay").click(function(){
 
