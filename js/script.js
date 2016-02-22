@@ -112,7 +112,8 @@
     $.routr.execute("home");
     $.routr.run();
 
-    $(".gallery ul li a img").unveil();
+    // $(".gallery ul li a img").unveil();
+    $("img.lazy").lazyload();
 
     $("#trigger-overlay").click(function(){
 
