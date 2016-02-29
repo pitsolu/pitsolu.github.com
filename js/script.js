@@ -53,6 +53,14 @@
         $("#main-nav").hide();
     });
 
+    $.routr.add("services", function(id){
+
+        $(".content-body .container .row main").remove();
+        $(".content-body .container .row").prepend($("#services").html());
+        $("#left-bar").hide();
+        $("#main-nav").hide();
+    });
+
     $.routr.add("contact-us", function(id){
 
         $(".content-body .container .row main").remove();
