@@ -2,11 +2,14 @@
 
 	function scrollTo(){
 
-		$('html, body').stop().animate({
-	        'scrollTop': $("a[href="+window.location.hash+"]").offset().top-55
-	    }, 900, 'swing', function () {
-	        //
-	    });
+		if(window.location.hash.trim()=="#bottom")
+			$("html, body").animate({ scrollTop: $(document).height() }, 900);
+		else
+			$('html, body').stop().animate({
+		        'scrollTop': $("a[href="+window.location.hash+"]").offset().top-55
+		    }, 900, 'swing', function () {
+		        //
+		    });
 	}
 
 	$(window).bind( 'hashchange', function(e){ 
