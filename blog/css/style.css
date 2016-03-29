@@ -1,0 +1,11 @@
+.archives ul li a{
+
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.archives ul li a:hover{
+
+	text-decoration: none;
+	color:#888;
+}
