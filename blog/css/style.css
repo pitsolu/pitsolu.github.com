@@ -1,10 +1,15 @@
-.archives ul li a{
+.archives table tr td:first-child{
+
+	padding-right:5px;
+}
+
+.archives table tr td a{
 
 	text-decoration: underline;
 	font-weight: bold;
 }
 
-.archives ul li a:hover{
+.archives table tr td a:hover{
 
 	text-decoration: none;
 	color:#888;

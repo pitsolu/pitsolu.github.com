@@ -32,7 +32,7 @@
 		scrollTo();
 	});
 
-	$("#headline").append("<a href='http://pitsolu.github.io'>&lt;Pitsolu/&gt;</a>");
+	$("#headline").prepend("<a href='http://pitsolu.github.io'>&lt;Pitsolu/&gt;</a>&nbsp;|&nbsp;");
 
 	$("a").each(function(i,e){
 
