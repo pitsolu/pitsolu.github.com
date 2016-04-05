@@ -34,7 +34,8 @@
 
 	$(window).bind( 'hashchange', function(e){ 
 
-		scrollTo();
+		if(!$("a[href="+window.location.hash+"]").isOnScreen())
+			scrollTo();
 	});
 
 	$("#headline").prepend("<a href='http://pitsolu.github.io'>&lt;Pitsolu/&gt;</a>&nbsp;|&nbsp;");
