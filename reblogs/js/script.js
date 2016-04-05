@@ -1,18 +1,23 @@
 (function(){
 
-	function isScrolledIntoView(elem){
+	$.fn.isOnScreen = function(){
 
-	    var $elem = $(elem);
-	    var $window = $(window);
+	    var win = $(window);
 
-	    var docViewTop = $window.scrollTop();
-	    var docViewBottom = docViewTop + $window.height();
+	    var viewport = {
+	        top : win.scrollTop(),
+	        left : win.scrollLeft()
+	    };
+	    viewport.right = viewport.left + win.width();
+	    viewport.bottom = viewport.top + win.height();
 
-	    var elemTop = $elem.offset().top;
-	    var elemBottom = elemTop + $elem.height();
+	    var bounds = this.offset();
+	    bounds.right = bounds.left + this.outerWidth();
+	    bounds.bottom = bounds.top + this.outerHeight();
 
-	    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-	}
+	    return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+
+	};
 
 	function scrollTo(){
 
@@ -39,11 +44,27 @@
 		if($(e).attr("href").substr(0,4) == "http")
 			$(e).attr("target","_blank");
 	});
+	
+	window.hashes = [];
+	$(window).scroll($.debounce( 250, true, function(){
 
-	$( window ).scroll(function() {
-	  
-		// console.log(isScrolledIntoView("a[href='#focus']"));
-	});
+		window.hashes = [];		
+	}));
+	
+	$(window).scroll($.debounce( 250, function(){
+
+		$("a[href*=#]").each(function(i,e){
+
+			if($("a[href='"+$(e).attr("href")+"']").isOnScreen())
+				window.hashes.push($(e).attr("href"));
+	  	})
+
+		if(window.hashes.length > 0)
+			if(window.hashes[0].trim() != "#bottom")
+				window.location.hash = window.hashes[0];
+
+		console.log(window.hashes);
+	}));
 
 	$(window).load(function() {
  
