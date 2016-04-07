@@ -43,6 +43,11 @@
           
             $(".loading").fadeOut("slow");
         })
+        .error(function(e){
+
+            $(".loading").fadeOut("slow");
+            $(e.target).remove();
+        })
     });
 
     $.routr.add("home", function(id){
@@ -75,13 +80,13 @@
 
             tbl.appendTo($("#influencers"));
         })
-        .done(function(){
-
-            console.log("done")
-        })
         .fail(function(e){
 
-            console.log("fail")
+            smoke.signal("Something went wrong while trying to load blog posts!!!", function(e){}, {
+                
+                duration: 3000,
+                classname: "custom-class"
+            });
         });
 
         $(".content-body .container .row main").remove();

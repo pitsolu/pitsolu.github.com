@@ -92,11 +92,14 @@ div#site-header{
 }
 
 
-.gallery a{
+.gallery .weblink{
 
 	font-weight: bold;
 	text-decoration: underline;
 	color: blue;
+	padding: 5px 10px 5px 10px;
+	background-color: lightgrey;
+	color:blue;
 }
 
 .gallery ul li a img{
