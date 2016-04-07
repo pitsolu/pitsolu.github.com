@@ -113,3 +113,9 @@ div#site-header{
 
 	text-decoration: underline;
 }
+
+#influencers table tr td a:hover, #pitsolu table tr td a:hover{
+
+	font-weight: bold;
+	color:#000;
+}

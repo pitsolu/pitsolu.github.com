@@ -53,6 +53,43 @@
         $("#main-nav").hide();
     });
 
+    $.routr.add("blog", function(id){
+
+        $.getJSON("blog/posts.json", function(data){
+           
+            var tbl = $(document.createElement("TABLE"))
+            $.each(data.influencers, function(i,e){
+
+                $("<tr>")
+                    .css({
+                        
+                        "border-bottom":"1px solid #000",
+                        "vertical-align":"top"
+                    })
+                    .append($("<td>").html(e.date))
+                    .append($("<td>").append($("<a target='_blank'>")
+                                                .attr("href","blog/"+e.name+".html")
+                                                .html(e.title)))
+                    .appendTo(tbl)
+            })
+
+            tbl.appendTo($("#influencers"));
+        })
+        .done(function(){
+
+            console.log("done")
+        })
+        .fail(function(e){
+
+            console.log("fail")
+        });
+
+        $(".content-body .container .row main").remove();
+        $(".content-body .container .row").prepend($("#blog").html());
+        $("#left-bar").hide();
+        $("#main-nav").hide();
+    });
+
     $.routr.add("services", function(id){
 
         $(".content-body .container .row main").remove();

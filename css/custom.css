@@ -90,7 +90,7 @@ p {
 	margin-bottom: 25px;
 }
 
-.page-title {
+.page-title, .section-title {
 	text-align: center;
 }
 h1.entry-title a:hover {
