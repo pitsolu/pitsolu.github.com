@@ -27,7 +27,7 @@
 
     $.routr.add("portfolio", function(id){
 
-        ga('send', 'pageview', {'page': location.pathname+"/"+location.hash});
+        ga('send', 'pageview', {'page': location.pathname+"/"+location.hash, "title":"Portfolio"});
 
         $(".content-body .container .row main").remove();
         $(".content-body .container .row").prepend($("#portfolio").html());
@@ -54,7 +54,7 @@
 
     $.routr.add("home", function(id){
 
-        ga('send', 'pageview', {'page': location.pathname+"/"+location.hash});
+        ga('send', 'pageview', {'page': location.pathname+"/"+location.hash, "title":"Home"});
 
         $(".content-body .container .row main").remove();
         $(".content-body .container .row").prepend($("#who-we-are").html());
@@ -64,7 +64,7 @@
 
     $.routr.add("blog", function(id){
 
-        ga('send', 'pageview', {'page': location.pathname+"/"+location.hash});
+        ga('send', 'pageview', {'page': location.pathname+"/"+location.hash, "title":"Blog"});
 
         $.getJSON("blog/posts.json", function(data){
            
@@ -103,7 +103,7 @@
 
     $.routr.add("services", function(id){
 
-        ga('send', 'pageview', {'page': location.pathname+"/"+location.hash});
+        ga('send', 'pageview', {'page': location.pathname+"/"+location.hash, "title":"Services"});
 
         $(".content-body .container .row main").remove();
         $(".content-body .container .row").prepend($("#services").html());
@@ -113,7 +113,7 @@
 
     $.routr.add("contact-us", function(id){
 
-        ga('send', 'pageview', {'page': location.pathname+"/"+location.hash});
+        ga('send', 'pageview', {'page': location.pathname+"/"+location.hash, "title":"Contact Us"});
 
         $(".content-body .container .row main").remove();
         $(".content-body .container .row").prepend($("#contact-us").html());
