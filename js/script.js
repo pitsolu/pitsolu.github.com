@@ -27,6 +27,8 @@
 
     $.routr.add("portfolio", function(id){
 
+        ga('send', 'pageview', {'page': location.pathname+"/"+location.hash});
+
         $(".content-body .container .row main").remove();
         $(".content-body .container .row").prepend($("#portfolio").html());
         $("#left-bar").hide();
@@ -52,6 +54,8 @@
 
     $.routr.add("home", function(id){
 
+        ga('send', 'pageview', {'page': location.pathname+"/"+location.hash});
+
         $(".content-body .container .row main").remove();
         $(".content-body .container .row").prepend($("#who-we-are").html());
         $("#left-bar").show();
@@ -59,6 +63,8 @@
     });
 
     $.routr.add("blog", function(id){
+
+        ga('send', 'pageview', {'page': location.pathname+"/"+location.hash});
 
         $.getJSON("blog/posts.json", function(data){
            
@@ -97,6 +103,8 @@
 
     $.routr.add("services", function(id){
 
+        ga('send', 'pageview', {'page': location.pathname+"/"+location.hash});
+
         $(".content-body .container .row main").remove();
         $(".content-body .container .row").prepend($("#services").html());
         $("#left-bar").hide();
@@ -104,6 +112,8 @@
     });
 
     $.routr.add("contact-us", function(id){
+
+        ga('send', 'pageview', {'page': location.pathname+"/"+location.hash});
 
         $(".content-body .container .row main").remove();
         $(".content-body .container .row").prepend($("#contact-us").html());
