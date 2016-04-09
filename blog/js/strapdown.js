@@ -364,7 +364,9 @@ var PR=win['PR']={'createSimpleLexer':createSimpleLexer,'registerLangHandler':re
       origin = scriptEls[i].src;
     }
   }
-  var originBase = origin.substr(0, origin.lastIndexOf('/'));
+  //var originBase = origin.substr(0, origin.lastIndexOf('/'));
+  var originBase = '';
+  // console.log(origin);
 
   // Get theme
   var theme = markdownEl.getAttribute('theme') || 'bootstrap';
@@ -372,17 +374,17 @@ var PR=win['PR']={'createSimpleLexer':createSimpleLexer,'registerLangHandler':re
 
   // Stylesheets
   var linkEl = document.createElement('link');
-  linkEl.href = originBase + '/themes/'+theme+'.min.css';
+  linkEl.href = originBase + 'css/themes/'+theme+'.min.css';
   linkEl.rel = 'stylesheet';
   document.head.appendChild(linkEl);
 
   var linkEl = document.createElement('link');
-  linkEl.href = originBase + '/strapdown.css';
+  linkEl.href = originBase + 'css/strapdown.css';
   linkEl.rel = 'stylesheet';
   document.head.appendChild(linkEl);
 
   var linkEl = document.createElement('link');
-  linkEl.href = originBase + '/themes/bootstrap-responsive.min.css';
+  linkEl.href = originBase + 'css/themes/bootstrap-responsive.min.css';
   linkEl.rel = 'stylesheet';
   document.head.appendChild(linkEl);
 

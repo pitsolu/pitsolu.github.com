@@ -64,7 +64,7 @@
 			if(window.hashes[0].trim() != "#bottom")
 				window.location.hash = window.hashes[0];
 
-		console.log(window.hashes);
+		// console.log(window.hashes);
 	}));
 
 	$(window).load(function() {
