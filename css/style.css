@@ -117,13 +117,19 @@ div#site-header{
 	text-decoration: underline;
 }
 
-#influencers table tr td a:hover, #pitsolu table tr td a:hover{
+#posts table tr td a:hover{
 
 	font-weight: bold;
 	color:#000;
 }
 
-#influencers, #pitsolu{
+#posts table tr td:nth-child(1){
 
+	padding-right:20px;
+}
+
+#posts{
+
+	font-size: 20px;
 	margin-top:30px;
 }

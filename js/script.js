@@ -67,9 +67,10 @@
         ga('send', 'pageview', {'page': location.pathname+"/"+location.hash, "title":"Blog"});
 
         $.getJSON("blog/posts.json", function(data){
-           
-            var tbl = $(document.createElement("TABLE"))
-            $.each(data.influencers, function(i,e){
+
+            var tbl = $(document.createElement("TABLE"));
+
+            $.each(data.reverse(), function(i,e){
 
                 $("<tr>")
                     .css({
@@ -82,9 +83,9 @@
                                                 .attr("href","blog/"+e.name+".html")
                                                 .html(e.title)))
                     .appendTo(tbl)
-            })
+            });
 
-            tbl.appendTo($("#influencers"));
+            tbl.appendTo($("#posts"));
         })
         .fail(function(e){
 
