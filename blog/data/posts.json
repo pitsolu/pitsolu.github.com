@@ -54,7 +54,7 @@
 	{
 		"name":"2016072800",
 		"date":"July 28 2016",
-		"title":"Fake Content!",
+		"title":"Fake Content! <b>&lt;P&#x2F;&gt;</b>",
 		"author":"Pitsolu Moderator",
 		"tags":["marketing", "pitsolu"],
 		"twitter":"@pitsolu"
@@ -62,7 +62,7 @@
 	{
 		"name":"2016120700",
 		"date":"December 07 2016",
-		"title":"Facebook should acquire Quora",
+		"title":"Facebook should acquire Quora <b>&lt;P&#x2F;&gt;</b>",
 		"author":"Pitsolu Moderator",
 		"tags":["marketing", "pitsolu", "fakenews"],
 		"twitter":"@pitsolu"
