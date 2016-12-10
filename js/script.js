@@ -269,5 +269,23 @@
         $("#main-nav").show();
     });
 
+    $.getJSON("data/home.json", function(data){
+
+        // console.log(data);
+
+        $("#recent-posts").append(createNestedList(data.recent));
+        $("#archives-posts").append(createNestedList(data.archives));
+
+        $("#archives-posts .none").remove();
+    })
+    .fail(function(e){
+
+        smoke.signal("Something went wrong while trying to load blog posts!!!", function(e){}, {
+            
+            duration: 3000,
+            classname: "custom-class"
+        });
+    });
+
 })();
 
