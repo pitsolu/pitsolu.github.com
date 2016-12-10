@@ -25,31 +25,68 @@
         return pattern.test(emailAddress);
     };
 
+    function createNestedList(data){
+
+        var ul = $(document.createElement("UL"));
+
+        $.each(data, function(i, j){
+
+            var li = $(document.createElement("LI"));            
+
+            if($.isPlainObject(j)){
+
+                if("link" in j){
+
+                    var a = $(document.createElement("A"));
+                    a.attr({
+
+                        "href":j.link,
+                        "target": "_blank"
+                    })
+                    a.html(j.name)
+                    a.addClass("undline")
+
+                    li.append(a);
+                }
+                else
+                    li.html(j.name);
+
+                if("details" in j)
+                    li.append(createNestedList(j.details))
+            }
+            else li.html(j);
+
+            ul.append(li);
+        })
+
+        return ul;
+    }
+
     $.routr.add("portfolio", function(id){
 
         ga('send', 'pageview', {'page': location.pathname+"/"+location.hash, "title":"Portfolio"});
 
-        $(".content-body .container .row main").remove();
-        $(".content-body .container .row").prepend($("#portfolio").html());
-        $("#left-bar").hide();
-        $("#main-nav").hide();
+        // $(".content-body .container .row main").remove();
+        // $(".content-body .container .row").prepend($("#portfolio").html());
+        // $("#left-bar").hide();
+        // $("#main-nav").hide();
 
-        $(".loading").pulse({times:0, duration: 300});
+        // $(".loading").pulse({times:0, duration: 300});
 
-        $("img.lazy").lazyload({
+        // $("img.lazy").lazyload({
 
-            effect : "fadeIn"
-        });
+        //     effect : "fadeIn"
+        // });
 
-        $(".gallery ul li a img").on("load", function() {
+        // $(".gallery ul li a img").on("load", function() {
           
-            $(".loading").fadeOut("slow");
-        })
-        .error(function(e){
+        //     $(".loading").fadeOut("slow");
+        // })
+        // .error(function(e){
 
-            $(".loading").fadeOut("slow");
-            $(e.target).remove();
-        })
+        //     $(".loading").fadeOut("slow");
+        //     $(e.target).remove();
+        // })
     });
 
     $.routr.add("home", function(id){
@@ -66,7 +103,7 @@
 
         ga('send', 'pageview', {'page': location.pathname+"/"+location.hash, "title":"Blog"});
 
-        $.getJSON("blog/posts.json", function(data){
+        $.getJSON("blog/data/posts.json", function(data){
 
             var tbl = $(document.createElement("TABLE"));
 
@@ -110,6 +147,36 @@
         $(".content-body .container .row").prepend($("#services").html());
         $("#left-bar").hide();
         $("#main-nav").hide();
+
+        $.getJSON("data/services.json", function(data){
+
+            $("#service-list").append(createNestedList(data));
+        })
+        .fail(function(e){
+
+            console.log(e);
+
+            smoke.signal("Something went wrong while trying to load services!!!", function(e){}, {
+                
+                duration: 3000,
+                classname: "custom-class"
+            });
+        });
+
+        $.getJSON("data/experience.json", function(data){
+
+            $("#experience-list").append(createNestedList(data));
+        })
+        .fail(function(e){
+
+            console.log(e);
+
+            smoke.signal("Something went wrong while trying to load experience!!!", function(e){}, {
+                
+                duration: 3000,
+                classname: "custom-class"
+            });
+        });
     });
 
     $.routr.add("contact-us", function(id){

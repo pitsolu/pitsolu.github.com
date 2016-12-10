@@ -1,0 +1,37 @@
+[
+	{
+		"name":"Digital Maketing",
+		"details":[
+
+			"SMS Marketing",
+			"Content Marketing",
+			"Email Marketing",
+			"Search Engine Marketing",
+			"Social Media Marketing"
+		]
+	},
+	{
+		"name":"Systems Development"
+	},
+	{
+		"name":"Software Project Management"
+	},
+	{
+		"name":"Requirements Analysis & Specification"
+	},
+	{
+		"name":"Systems Analysis & Design"
+	},
+	{
+		"name":"Systems Quality Assurance & Testing"
+	},
+	{
+		"name":"Systems Implementation & Deployment"
+	},
+	{
+		"name":"Information System Audit"
+	},
+	{
+		"name":"Database Administration"
+	}
+]

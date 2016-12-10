@@ -1,0 +1,52 @@
+[
+	{
+		"name":"Customer Care Systems"
+	},
+	{
+		"name":"Enterprise Resource Planning (ERP) Systems",
+		"details":[
+
+			"Human Resource Systems",
+			"Payroll Systems",
+			"Procurement Systems",
+			"Inventory Systems",
+			"Accounting Systems"
+		]
+	},
+	{
+		"name":"Insurance Systems"
+	},
+	{
+		"name":"Clinic Systems"
+	},
+	{
+		"name":"Legislation Management Systems"
+	},
+	{
+		"name":"Systems Integration",
+		"details":[
+
+			{
+				"name":"Application Programming Interface (API)",
+				"link":"https://en.wikipedia.org/wiki/Application_programming_interface"
+			},
+			{
+				"name":"Systems Architectural Development",
+				"details":[
+
+					{
+						"name":"Microservices",
+						"link":"https://en.wikipedia.org/wiki/Microservices"
+					},
+					{
+						"name":"SOA",
+						"link":"https://en.wikipedia.org/wiki/Service-oriented_architecture"
+					}
+				]
+			}
+		]
+	},
+	{
+		"name":"Website Development"
+	}
+]
