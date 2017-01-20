@@ -18,9 +18,12 @@
 		"name":"Systems Implementation & Deployment"
 	},
 	{
-		"name":"Information System Audit"
+		"name":"System Audit"
 	},
 	{
 		"name":"Database Administration"
+	},
+	{
+		"name":"Systems Integration"
 	}
 ]
