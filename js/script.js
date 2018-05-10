@@ -99,6 +99,36 @@
         $("#main-nav").hide();
     });
 
+    $.routr.add("dev-blog", function(id){
+
+        $.getJSON("blog/data/dev-posts.json", function(data){
+
+            var tbl = $(document.createElement("TABLE"));
+
+            $.each(data.reverse(), function(i,e){
+
+                $("<tr>")
+                    .css({
+                        
+                        "border-bottom":"1px solid #000",
+                        "vertical-align":"top"
+                    })
+                    .append($("<td>").html(e.date))
+                    .append($("<td>").append($("<a target='_blank'>")
+                                                .attr("href", e.ref)
+                                                .html(e.title)))
+                    .appendTo(tbl)
+            });
+
+            tbl.appendTo($("#posts"));            
+        })
+
+        $(".content-body .container .row main").remove();
+        $(".content-body .container .row").prepend($("#dev-blog").html());
+        $("#left-bar").hide();
+        $("#main-nav").hide();
+    })
+
     $.routr.add("blog", function(id){
 
         ga('send', 'pageview', {'page': location.pathname+"/"+location.hash, "title":"Blog"});
