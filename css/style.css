@@ -122,6 +122,12 @@ div#site-header{
 	font-weight: bold;
 }
 
+.page-title{
+
+	padding-top: 25px;
+	padding-bottom: 50px;
+}
+
 .blogs tr:nth-child(even) {background: #CCC}
 .blogs tr:nth-child(odd) {background: #FFF}
 .blogs tr:hover{background: grey;}
