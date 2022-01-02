@@ -1,7 +1,9 @@
-app.controller("blogsController", ["$scope", "$http", "blogsService", 
-	function($scope, $http, blogsService){
+app.controller("blogsController", ["$scope", "$http", "$stateParams", "blogsService", 
+	function($scope, $http, $stateParams, blogsService){
 
-	blogsService.get().then(function(data){
+	$scope.blog_type = $stateParams.type;
+
+	blogsService.get($stateParams.type).then(function(data){
 
 		$scope.blogs = data
 	});

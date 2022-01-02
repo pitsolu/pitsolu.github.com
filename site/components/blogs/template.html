@@ -1,11 +1,12 @@
-<h1 class="page-title">Posts</h1>
+<h1 class="page-title">{{blog_type}}</h1>
 <div class="row justify-content-center">
 	<div class="col-auto blogs">
 	  <table class="table table-responsive">
 		<tr ng-repeat="blog in blogs">
 			<td>{{blog.date}}</td>
 			<td>
-				<a href="#!/blog/{{blog.file}}">{{blog.title}}</a>
+				<a ng-if="blog_type" href="#!/blog/{{blog_type}}/{{blog.file}}">{{blog.title}}</a>
+				<a ng-if="!blog_type" href="#!/blog/{{blog.file}}">{{blog.title}}</a>
 			</td>
 		</tr>
 	  </table>

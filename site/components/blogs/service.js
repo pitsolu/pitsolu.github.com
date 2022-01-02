@@ -1,12 +1,16 @@
 app.service("blogsService", ["$http","$ajax","$q", function($http, $ajax, $q){
 
-	this.get = function(){
+	this.get = function(type){
+
+		var url = "/docs/articles.json"
+		if(type == "dev")
+			url = "/docs/articles-dev.json"
 
 		var deferred = $q.defer();
 
 		$ajax({
 
-			url: "/docs/articles.json",
+			url: url,
 			type:"GET"
 		})
 	    .done(function(data){

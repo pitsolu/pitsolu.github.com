@@ -101,13 +101,13 @@ app.config(['$stateProvider',
     })
     .state('blog', {
 
-        url:'/blog/:blog',
+        url:'/blog/:type/:blog',
         templateUrl : "blog.html",
         controller:"blogController"
     })
     .state('blogs', {
 
-        url:'/blogs',
+        url:'/blogs/:type',
         templateUrl : "blogs.html",
         controller:"blogsController"
     })
