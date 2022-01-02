@@ -62,260 +62,260 @@
         return ul;
     }
 
-    $.routr.add("portfolio", function(id){
+    // $.routr.add("portfolio", function(id){
 
-        ga('send', 'pageview', {'page': location.pathname+"/"+location.hash, "title":"Portfolio"});
+    //     ga('send', 'pageview', {'page': location.pathname+"/"+location.hash, "title":"Portfolio"});
 
-        // $(".content-body .container .row main").remove();
-        // $(".content-body .container .row").prepend($("#portfolio").html());
-        // $("#left-bar").hide();
-        // $("#main-nav").hide();
+    //     // $(".content-body .container .row main").remove();
+    //     // $(".content-body .container .row").prepend($("#portfolio").html());
+    //     // $("#left-bar").hide();
+    //     // $("#main-nav").hide();
 
-        // $(".loading").pulse({times:0, duration: 300});
+    //     // $(".loading").pulse({times:0, duration: 300});
 
-        // $("img.lazy").lazyload({
+    //     // $("img.lazy").lazyload({
 
-        //     effect : "fadeIn"
-        // });
+    //     //     effect : "fadeIn"
+    //     // });
 
-        // $(".gallery ul li a img").on("load", function() {
+    //     // $(".gallery ul li a img").on("load", function() {
           
-        //     $(".loading").fadeOut("slow");
-        // })
-        // .error(function(e){
+    //     //     $(".loading").fadeOut("slow");
+    //     // })
+    //     // .error(function(e){
 
-        //     $(".loading").fadeOut("slow");
-        //     $(e.target).remove();
-        // })
-    });
+    //     //     $(".loading").fadeOut("slow");
+    //     //     $(e.target).remove();
+    //     // })
+    // });
 
-    $.routr.add("home", function(id){
+    // $.routr.add("home", function(id){
 
-        ga('send', 'pageview', {'page': location.pathname+"/"+location.hash, "title":"Home"});
+    //     ga('send', 'pageview', {'page': location.pathname+"/"+location.hash, "title":"Home"});
 
-        $(".content-body .container .row main").remove();
-        $(".content-body .container .row").prepend($("#who-we-are").html());
-        $("#left-bar").show();
-        $("#main-nav").hide();
-    });
+    //     $(".content-body .container .row main").remove();
+    //     $(".content-body .container .row").prepend($("#who-we-are").html());
+    //     $("#left-bar").show();
+    //     $("#main-nav").hide();
+    // });
 
-    $.routr.add("dev-blog", function(id){
+    // $.routr.add("dev-blog", function(id){
 
-        $.getJSON("blog/data/dev-posts.json", function(data){
+    //     $.getJSON("blog/data/dev-posts.json", function(data){
 
-            var tbl = $(document.createElement("TABLE"));
+    //         var tbl = $(document.createElement("TABLE"));
 
-            $.each(data.reverse(), function(i,e){
+    //         $.each(data.reverse(), function(i,e){
 
-                $("<tr>")
-                    .css({
+    //             $("<tr>")
+    //                 .css({
                         
-                        "border-bottom":"1px solid #000",
-                        "vertical-align":"top"
-                    })
-                    .append($("<td>").html(e.date))
-                    .append($("<td>").append($("<a target='_blank'>")
-                                                .attr("href", e.ref)
-                                                .html(e.title)))
-                    .appendTo(tbl)
-            });
+    //                     "border-bottom":"1px solid #000",
+    //                     "vertical-align":"top"
+    //                 })
+    //                 .append($("<td>").html(e.date))
+    //                 .append($("<td>").append($("<a target='_blank'>")
+    //                                             .attr("href", e.ref)
+    //                                             .html(e.title)))
+    //                 .appendTo(tbl)
+    //         });
 
-            tbl.appendTo($("#posts"));            
-        })
+    //         tbl.appendTo($("#posts"));            
+    //     })
 
-        $(".content-body .container .row main").remove();
-        $(".content-body .container .row").prepend($("#dev-blog").html());
-        $("#left-bar").hide();
-        $("#main-nav").hide();
-    })
+    //     $(".content-body .container .row main").remove();
+    //     $(".content-body .container .row").prepend($("#dev-blog").html());
+    //     $("#left-bar").hide();
+    //     $("#main-nav").hide();
+    // })
 
-    $.routr.add("blog", function(id){
+    // $.routr.add("blog", function(id){
 
-        ga('send', 'pageview', {'page': location.pathname+"/"+location.hash, "title":"Blog"});
+    //     ga('send', 'pageview', {'page': location.pathname+"/"+location.hash, "title":"Blog"});
 
-        $.getJSON("blog/data/posts.json", function(data){
+    //     $.getJSON("blog/data/posts.json", function(data){
 
-            var tbl = $(document.createElement("TABLE"));
+    //         var tbl = $(document.createElement("TABLE"));
 
-            $.each(data.reverse(), function(i,e){
+    //         $.each(data.reverse(), function(i,e){
 
-                $("<tr>")
-                    .css({
+    //             $("<tr>")
+    //                 .css({
                         
-                        "border-bottom":"1px solid #000",
-                        "vertical-align":"top"
-                    })
-                    .append($("<td>").html(e.date))
-                    .append($("<td>").append($("<a target='_blank'>")
-                                                .attr("href","blog/"+e.name+".html")
-                                                .html(e.title)))
-                    .appendTo(tbl)
-            });
+    //                     "border-bottom":"1px solid #000",
+    //                     "vertical-align":"top"
+    //                 })
+    //                 .append($("<td>").html(e.date))
+    //                 .append($("<td>").append($("<a target='_blank'>")
+    //                                             .attr("href","blog/"+e.name+".html")
+    //                                             .html(e.title)))
+    //                 .appendTo(tbl)
+    //         });
 
-            tbl.appendTo($("#posts"));
-        })
-        .fail(function(e){
+    //         tbl.appendTo($("#posts"));
+    //     })
+    //     .fail(function(e){
 
-            smoke.signal("Something went wrong while trying to load blog posts!!!", function(e){}, {
+    //         smoke.signal("Something went wrong while trying to load blog posts!!!", function(e){}, {
                 
-                duration: 3000,
-                classname: "custom-class"
-            });
-        });
+    //             duration: 3000,
+    //             classname: "custom-class"
+    //         });
+    //     });
 
-        $(".content-body .container .row main").remove();
-        $(".content-body .container .row").prepend($("#blog").html());
-        $("#left-bar").hide();
-        $("#main-nav").hide();
-    });
+    //     $(".content-body .container .row main").remove();
+    //     $(".content-body .container .row").prepend($("#blog").html());
+    //     $("#left-bar").hide();
+    //     $("#main-nav").hide();
+    // });
 
-    $.routr.add("services", function(id){
+    // $.routr.add("services", function(id){
 
-        ga('send', 'pageview', {'page': location.pathname+"/"+location.hash, "title":"Services"});
+    //     ga('send', 'pageview', {'page': location.pathname+"/"+location.hash, "title":"Services"});
 
-        $(".content-body .container .row main").remove();
-        $(".content-body .container .row").prepend($("#services").html());
-        $("#left-bar").hide();
-        $("#main-nav").hide();
+    //     $(".content-body .container .row main").remove();
+    //     $(".content-body .container .row").prepend($("#services").html());
+    //     $("#left-bar").hide();
+    //     $("#main-nav").hide();
 
-        $.getJSON("data/services.json", function(data){
+    //     $.getJSON("data/services.json", function(data){
 
-            $("#service-list").append(createNestedList(data));
-        })
-        .fail(function(e){
+    //         $("#service-list").append(createNestedList(data));
+    //     })
+    //     .fail(function(e){
 
-            console.log(e);
+    //         console.log(e);
 
-            smoke.signal("Something went wrong while trying to load services!!!", function(e){}, {
+    //         smoke.signal("Something went wrong while trying to load services!!!", function(e){}, {
                 
-                duration: 3000,
-                classname: "custom-class"
-            });
-        });
+    //             duration: 3000,
+    //             classname: "custom-class"
+    //         });
+    //     });
 
-        $.getJSON("data/experience.json", function(data){
+    //     $.getJSON("data/experience.json", function(data){
 
-            $("#experience-list").append(createNestedList(data));
-        })
-        .fail(function(e){
+    //         $("#experience-list").append(createNestedList(data));
+    //     })
+    //     .fail(function(e){
 
-            console.log(e);
+    //         console.log(e);
 
-            smoke.signal("Something went wrong while trying to load experience!!!", function(e){}, {
+    //         smoke.signal("Something went wrong while trying to load experience!!!", function(e){}, {
                 
-                duration: 3000,
-                classname: "custom-class"
-            });
-        });
-    });
+    //             duration: 3000,
+    //             classname: "custom-class"
+    //         });
+    //     });
+    // });
 
-    $.routr.add("contact-us", function(id){
+    // $.routr.add("contact-us", function(id){
 
-        ga('send', 'pageview', {'page': location.pathname+"/"+location.hash, "title":"Contact Us"});
+    //     ga('send', 'pageview', {'page': location.pathname+"/"+location.hash, "title":"Contact Us"});
 
-        $(".content-body .container .row main").remove();
-        $(".content-body .container .row").prepend($("#contact-us").html());
-        $("#left-bar").hide();
-        $("#main-nav").hide();
+    //     $(".content-body .container .row main").remove();
+    //     $(".content-body .container .row").prepend($("#contact-us").html());
+    //     $("#left-bar").hide();
+    //     $("#main-nav").hide();
 
-        $("#send").click(function(){
+    //     $("#send").click(function(){
 
-            if(!$("#name").val())
-                smoke.signal("Name field is required!", function(e){}, {
+    //         if(!$("#name").val())
+    //             smoke.signal("Name field is required!", function(e){}, {
 
-                        duration: 3000,
-                        classname: "custom-class"
-                    });
+    //                     duration: 3000,
+    //                     classname: "custom-class"
+    //                 });
 
-            else if(!$("#email").val())
-                smoke.signal("Email field is required!", function(e){}, {
+    //         else if(!$("#email").val())
+    //             smoke.signal("Email field is required!", function(e){}, {
 
-                        duration: 3000,
-                        classname: "custom-class"
-                    });
+    //                     duration: 3000,
+    //                     classname: "custom-class"
+    //                 });
 
-            else if(!isValidEmailAddress($("#email").val()))
-                smoke.signal("Invalid email address!", function(e){}, {
+    //         else if(!isValidEmailAddress($("#email").val()))
+    //             smoke.signal("Invalid email address!", function(e){}, {
 
-                        duration: 3000,
-                        classname: "custom-class"
-                    });
+    //                     duration: 3000,
+    //                     classname: "custom-class"
+    //                 });
 
-            else if(!$("#subject").val())
-                smoke.signal("Subject field is required!", function(e){}, {
+    //         else if(!$("#subject").val())
+    //             smoke.signal("Subject field is required!", function(e){}, {
 
-                        duration: 3000,
-                        classname: "custom-class"
-                    });
+    //                     duration: 3000,
+    //                     classname: "custom-class"
+    //                 });
 
-            else if(!$("#message").val())
-                smoke.signal("Message field is required!", function(e){}, {
+    //         else if(!$("#message").val())
+    //             smoke.signal("Message field is required!", function(e){}, {
 
-                        duration: 3000,
-                        classname: "custom-class"
-                    });
-            else
-                $.ajax({
+    //                     duration: 3000,
+    //                     classname: "custom-class"
+    //                 });
+    //         else
+    //             $.ajax({
 
-                    url: "http://formspree.io/pitsolu@gmail.com",
-                    method: "POST",
-                    data: {
-                            "name":$("#name").val(),
-                            "_replyto":$("#email").val(),
-                            "_subject":$("#subject").val(),
-                            "message":$("#message").val()
-                        },
-                    dataType: "json"
-                })
-                .success(function(){
+    //                 url: "http://formspree.io/pitsolu@gmail.com",
+    //                 method: "POST",
+    //                 data: {
+    //                         "name":$("#name").val(),
+    //                         "_replyto":$("#email").val(),
+    //                         "_subject":$("#subject").val(),
+    //                         "message":$("#message").val()
+    //                     },
+    //                 dataType: "json"
+    //             })
+    //             .success(function(){
 
-                    $("#name").val("");
-                    $("#email").val("");
-                    $("#subject").val("");
-                    $("#message").val("");
+    //                 $("#name").val("");
+    //                 $("#email").val("");
+    //                 $("#subject").val("");
+    //                 $("#message").val("");
 
-                    smoke.signal("Thanks you. Your feedback has been submitted.", function(e){}, {
+    //                 smoke.signal("Thanks you. Your feedback has been submitted.", function(e){}, {
 
-                        duration: 3000,
-                        classname: "custom-class"
-                    });
-                })
-                .fail(function(){
+    //                     duration: 3000,
+    //                     classname: "custom-class"
+    //                 });
+    //             })
+    //             .fail(function(){
 
-                    smoke.signal("Something went wrong!!!", function(e){}, {
+    //                 smoke.signal("Something went wrong!!!", function(e){}, {
                         
-                        duration: 3000,
-                        classname: "custom-class"
-                    });
-                });
-        });
-    });
+    //                     duration: 3000,
+    //                     classname: "custom-class"
+    //                 });
+    //             });
+    //     });
+    // });
 
-    $.routr.execute("home");
-    $.routr.run();
+    // $.routr.execute("home");
+    // $.routr.run();
 
-    $("#trigger-overlay").click(function(){
+    // $("#trigger-overlay").click(function(){
 
-        $("#main-nav").show();
-    });
+    //     $("#main-nav").show();
+    // });
 
-    $.getJSON("data/home.json", function(data){
+    // $.getJSON("data/home.json", function(data){
 
-        // console.log(data);
+    //     // console.log(data);
 
-        $("#recent-posts").append(createNestedList(data.recent));
-        $("#archives-posts").append(createNestedList(data.archives));
+    //     $("#recent-posts").append(createNestedList(data.recent));
+    //     $("#archives-posts").append(createNestedList(data.archives));
 
-        $("#archives-posts .none").remove();
-    })
-    .fail(function(e){
+    //     $("#archives-posts .none").remove();
+    // })
+    // .fail(function(e){
 
-        smoke.signal("Something went wrong while trying to load blog posts!!!", function(e){}, {
+    //     smoke.signal("Something went wrong while trying to load blog posts!!!", function(e){}, {
             
-            duration: 3000,
-            classname: "custom-class"
-        });
-    });
+    //         duration: 3000,
+    //         classname: "custom-class"
+    //     });
+    // });
 
 })();
 

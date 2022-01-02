@@ -117,19 +117,37 @@ div#site-header{
 	text-decoration: underline;
 }
 
-#posts table tr td a:hover{
+.blogs{
 
 	font-weight: bold;
-	color:#000;
 }
 
-#posts table tr td:nth-child(1){
+.blogs tr:nth-child(even) {background: #CCC}
+.blogs tr:nth-child(odd) {background: #FFF}
+.blogs tr:hover{background: grey;}
 
-	padding-right:20px;
+.post img{
+
+	display: block;
+	margin-left: auto;
+  	margin-right: auto;
+  	width: 50%;
+  	padding: 50px;
 }
 
-#posts{
+.post a{
 
-	font-size: 20px;
-	margin-top:30px;
+	color: blue;
+}
+
+.post a:hover{
+
+	color: darkblue;
+	font-weight: bold;
+}
+
+.post {
+
+	padding-left: 150px;
+	padding-right: 150px;
 }

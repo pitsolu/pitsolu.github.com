@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<title>&lt;Pitsolu&#x2F;&gt;</title>
+
+		<!-- meta -->
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	    <!-- css -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/ionicons.min.css">
+		<link rel="stylesheet" href="css/pace.css">
+	    <link rel="stylesheet" href="css/custom.css">
+	    <link rel="stylesheet" href="css/style.css">
+	    <link rel="stylesheet" href="css/smoke.css">
+	    <link rel="stylesheet" href="css/lity.min.css">
+	    <!-- bower:css -->
+
+  		<!-- endbower -->
+
+  		<!-- bower:js -->
+
+		<!-- endbower -->
+	    <!-- js -->
+	    <script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			
+			ga('create', 'UA-73306315-1', 'auto');
+			ga('send', 'pageview');
+			ga('send', 'page',"/","Home");
+		</script>
+	    <script src="js/jquery-2.1.3.min.js"></script>
+	    <script src="js/jquery.routr.min.js"></script>
+	    <script src="js/bootstrap.min.js"></script>
+	    <script src="js/pace.min.js"></script>
+	    <script src="js/modernizr.custom.min.js"></script>
+	    <script src="js/smoke.min.js"></script>
+	    <script src="js/lity.min.js"></script>
+	    <script src="js/lazyload.min.js"></script>
+	    <!-- site components -->
+	    <script src="site/main.js"></script>
+	    <script src="site/components/blogs/service.js"></script>
+	    <script src="site/components/blog/controller.js"></script>
+	    <script src="site/components/blogs/controller.js"></script>
+	    <!-- site components -->
+	    <script type="text/ng-template" charset="utf-8" id="portfolio.html">
+			<!-- @include portfolio/template.html -->
+		</script>
+		<script type="text/ng-template" id="blog.html">
+	    	<!-- @include blog/template.html -->
+	    </script>
+	    <script type="text/ng-template" id="dev-blogs.html">
+	    	<!-- @include blogs-dev/template.html -->
+	    </script>
+	    <script type="text/ng-template" id="blogs.html">
+	    	<!-- @include blogs/template.html -->
+	    </script>
+	    <script type="text/ng-template" id="services.html">
+	    	<!-- @include services/template.html -->
+	    </script>
+	    <script type="text/ng-template" id="about.html">
+	    	<!-- @include about/template.html -->
+	    </script>
+	    <script type="text/ng-template" id="contacts.html">
+	    	<!-- @include contacts/template.html -->
+	    </script>
+	    <script type="text/ng-template" id="home.html">
+	    	<!-- @include home/template.html -->
+	    </script>
+	</head>
+
+	<body>
+		<div class="container">	
+			<nav id="main-nav" class="navigation overflow">
+				<ul>
+					<li><a href="#!/home">Home</a></li>
+					<li><a href="#!/blogs">Blogs</a></li>
+					<li><a href="#!/dev/blogs">Dev Blogs</a></li>
+					<li><a href="#!/services">Services</a></li>
+					<li><a href="#!/contacts">Contact</a></li>
+				</ul>
+			</nav>
+			<header id="site-header">
+				<div class="row">
+					<div class="col-md-4 col-sm-5 col-xs-8">
+						<div class="logo">
+							<!-- <h1><a href="index.html"><b>Black</b> &amp; White</a></h1> -->
+							<h1><a target="_blank" href="https://github.com/pitsolu">&lt;Pitsolu&#x2F;&gt;</a></h1>
+						</div>
+					</div><!-- col-md-4 -->
+					<div class="col-md-8 col-sm-7 col-xs-4">
+						<nav class="main-nav" role="navigation">
+							<div class="navbar-header">
+  								<button type="button" id="trigger-overlay" class="navbar-toggle">
+    								<span class="ion-navicon"></span>
+  								</button>
+							</div>
+
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  								<ul class="nav navbar-nav navbar-right">
+    								<li class="cl-effect-11">
+    									<a href="#!/home" data-hover="Home">Home</a>
+    								</li>
+    								<li class="cl-effect-11">
+    									<a href="#!/blogs" data-hover="Blog">Blog</a>
+    								</li>
+    								<li class="cl-effect-11">
+    									<a href="#!/dev-blogs" data-hover="Dev:Blogs">Dev:Blogs</a>
+    								</li>
+    								<li class="cl-effect-11">
+    									<a href="#!/services" data-hover="Services">Services</a>
+    								</li>
+    								<!-- <li class="cl-effect-11"><a href="#portfolio" data-hover="Portfolio">Portfolio</a></li> -->
+    								<li class="cl-effect-11">
+    									<a href="#!/contacts" data-hover="Contact">Contact</a>
+    								</li>
+  								</ul>
+							</div><!-- /.navbar-collapse -->
+						</nav>
+						<!-- <div id="header-search-box">
+							<a id="search-menu" href="#"><span id="search-icon" class="ion-ios-search-strong"></span></a>
+							<div id="search-form" class="search-form">
+								<form role="search" method="get" id="searchform" action="#">
+									<input type="search" placeholder="Search" required>
+									<button type="submit"><span class="ion-ios-search-strong"></span></button>
+								</form>				
+							</div>
+						</div> -->
+					</div><!-- col-md-8 -->
+				</div>
+			</header>
+		</div>
+
+		<div class="content-body">
+			<div class="container">
+				<div class="row">
+					<!-- <main class="col-md-8"></main> -->
+					<!-- <main class="col-md-8">
+						
+					</main> -->
+					<main class="{{col_md}}" ui-view></main>
+					<aside class="col-md-4" id="left-bar" ng-hide="hide_leftbar">
+						<div class="widget widget-recent-posts" id="recent-posts">		
+							<h3 class="widget-title">Recent Posts</h3>		
+							<!-- <ul>
+								<li><a target="_blank" href="blog/2016040500.html">Hospitality Top Digital Marketing Trends</a></li>
+								<li><a target="_blank" href="blog/2016032200.html">Gain Traffic Through Blogging</a></li>
+								<li><a target="_blank" href="blog/2016032201.html">Brand Story Most Valuable Marketing Tool</a></li>
+								<li><a href="#home">Pitsolu | Technology Startup </a></li>
+							</ul> -->
+						</div>
+						<div class="widget widget-archives" id="archives-posts">		
+							<h3 class="widget-title">Archives</h3>		
+							<ul class="none">
+								<li>
+									<a href="#">None</a>
+								</li>
+								<!-- <li>
+									<a href="#">November 2014</a>
+								</li>
+								<li>
+									<a href="#">September 2014</a>
+								</li>
+								<li>
+									<a href="#">January 2013</a>
+								</li> -->
+							</ul>
+						</div>
+
+						<div class="widget widget-category" id="category-posts">		
+							<h3 class="widget-title">Category</h3>		
+							<ul class="none">
+								<li>
+									<a href="#">None</a>
+								</li>
+								<!-- <li>
+									<a href="#">Web Design</a>
+								</li>
+								<li>
+									<a href="#">Web Development</a>
+								</li>
+								<li>
+									<a href="#">SEO</a>
+								</li> -->
+							</ul>
+						</div>
+					</aside>
+				</div>
+			</div>
+		</div>
+		<footer id="site-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<!-- <p class="copyright">&copy; 2014 ThemeWagon.com</p> -->
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Mobile Menu -->
+		<!-- <div class="overlay overlay-hugeinc">
+			<button type="button" class="overlay-close"><span class="ion-ios-close-empty"></span></button>
+			<nav>
+				<ul>
+					<li><a href="#home">Home</a></li> -->
+					<!-- <li><a href="#blog">Blog</a></li> -->
+					<!-- <li><a href="#about-us">About</a></li> -->
+					<!-- <li><a href="#contact-us">Contact</a></li>
+				</ul>
+			</nav>
+		</div> -->
+
+		<!--<script src="js/classie.js"></script>-->
+		<script src="js/script.js"></script>
+
+	</body>
+</html>
