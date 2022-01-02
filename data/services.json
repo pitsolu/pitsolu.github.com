@@ -1,0 +1,29 @@
+[
+	{
+		"name":"Systems Development"
+	},
+	{
+		"name":"Software Project Management"
+	},
+	{
+		"name":"Requirements Analysis & Specification"
+	},
+	{
+		"name":"Systems Analysis & Design"
+	},
+	{
+		"name":"Systems Quality Assurance & Testing"
+	},
+	{
+		"name":"Systems Implementation & Deployment"
+	},
+	{
+		"name":"System Audit"
+	},
+	{
+		"name":"Database Administration"
+	},
+	{
+		"name":"Systems Integration"
+	}
+]

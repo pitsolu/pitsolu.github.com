@@ -1,0 +1,29 @@
+[
+	{
+		"name":"Customer Care Systems"
+	},
+	{
+		"name":"Enterprise Resource Planning (ERP) Systems",
+		"details":[
+
+			"Human Resource Systems",
+			"Payroll Systems",
+			"Procurement Systems",
+			"Inventory Systems",
+			"Accounting Systems"
+		]
+	},
+	{
+		"name":"Insurance Systems"
+	},
+	{
+		"name":"Clinic Systems"
+	},
+	{
+		"name":"Legislation Management Systems"
+	},
+	{
+		"name":"Websites",
+		"link":"http://pitsolu.bitbucket.org"
+	}
+]

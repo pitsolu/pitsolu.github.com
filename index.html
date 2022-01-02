@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>&lt;Pitsolu&#x2F;&gt;</title>
+
+		<!-- meta -->
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	    <!-- css -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/ionicons.min.css">
+		<link rel="stylesheet" href="css/pace.css">
+	    <link rel="stylesheet" href="css/custom.css">
+	    <link rel="stylesheet" href="css/style.css">
+	    <link rel="stylesheet" href="css/smoke.css">
+	    <link rel="stylesheet" href="css/lity.min.css">
+
+	    <!-- js -->
+	    <script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			
+			ga('create', 'UA-73306315-1', 'auto');
+			ga('send', 'pageview');
+			ga('send', 'page',"/","Home");
+		</script>
+	    <script src="js/jquery-2.1.3.min.js"></script>
+	    <script src="js/jquery.routr.min.js"></script>
+	    <script src="js/bootstrap.min.js"></script>
+	    <script src="js/pace.min.js"></script>
+	    <script src="js/modernizr.custom.min.js"></script>
+	    <script src="js/smoke.min.js"></script>
+	    <script src="js/lity.min.js"></script>
+	    <script src="js/lazyload.min.js"></script>
+	    <script type="text/html" id="portfolio">
+	    	<!-- <main class="col-md-12">
+				<h1 class="page-title">Web</br><span class="loading">&nbsp;Loading&nbsp;...</span></h1>
+				<article class="post">
+					<div class="entry-content clearfix">
+						<div class="gallery">
+							<a href="http://idealrestaurant.co.ke" target="_blank" class="weblink">Ideal</a>
+							<ul>
+								<li>
+									<a data-lity data-lity-target="images/portfolio/big/ideal-desktop.png">
+										<img class="lazy" src="images/image-placeholder.png" data-original="images/portfolio/thumbs/ideal-desktop-thumb.png"/>
+									</a>
+								</li>
+								<li>
+									<a data-lity data-lity-target="images/portfolio/big/ideal-mobile.png">
+										<img class="lazy" src="images/image-placeholder.png" data-original="images/portfolio/thumbs/ideal-mobile-thumb.png"/>
+									</a>
+								</li>
+							</ul>
+							<a href="http://pitsolu.bitbucket.org/sibi" target="_blank" class="weblink">SIBI</a>
+							<ul>
+								<li>
+									<a data-lity data-lity-target="images/portfolio/big/sibi-desktop.png">
+										<img class="lazy" src="images/image-placeholder.png" data-original="images/portfolio/thumbs/sibi-desktop-thumb.png"/>
+									</a>
+								</li>
+								<li>
+									<a data-lity data-lity-target="images/portfolio/big/sibi-mobile.png">
+										<img class="lazy" src="images/image-placeholder.png" data-original="images/portfolio/thumbs/sibi-mobile-thumb.png"/>
+									</a>
+								</li>
+							</ul>
+							<a href="http://pitsolu.bitbucket.org/irec" target="_blank" class="weblink">IREC</a>
+							<ul>
+								<li>
+									<a data-lity data-lity-target="images/portfolio/big/irec-desktop.png">
+										<img class="lazy" src="images/image-placeholder.png" data-original="images/portfolio/thumbs/irec-desktop-thumb.png"/>
+									</a>
+								</li>
+								<li>
+									<a data-lity data-lity-target="images/portfolio/big/irec-mobile.png">
+										<img class="lazy" src="images/image-placeholder.png" data-original="images/portfolio/thumbs/irec-mobile-thumb.png"/>
+									</a>
+								</li>
+							</ul>
+							<a href="http://pitsolu.bitbucket.org/instore" target="_blank" class="weblink">In-Store</a>
+							<ul>
+								<li>
+									<a data-lity data-lity-target="images/portfolio/big/in-store-desktop.png">
+										<img class="lazy" src="images/image-placeholder.png" data-original="images/portfolio/thumbs/in-store-desktop-thumb.png"/>
+									</a>
+								</li>
+								<li>
+									<a data-lity data-lity-target="images/portfolio/big/in-store-mobile.png">
+										<img class="lazy" src="images/image-placeholder.png" data-original="images/portfolio/thumbs/in-store-mobile-thumb.png"/>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</article>
+			</main> -->
+	    </script>
+	    <script type="text/html" id="dev-blog">
+	    	<main class="col-md-12">
+				<h1 class="page-title">Posts>$</h1>
+				<article class="post">
+					<div class="row entry-content">
+						<div class="col-md-10" id="posts"></div>
+					</div>
+				</article>
+			</main>
+	    </script>
+	    <script type="text/html" id="blog">
+	    	<main class="col-md-12">
+				<h1 class="page-title">Posts</h1>
+				<article class="post">
+					<div class="row entry-content">
+						<div class="col-md-10" id="posts"></div>
+					</div>
+				</article>
+			</main>
+	    </script>
+	    <script type="text/html" id="services">
+	    	<main class="col-md-12">
+				<h1 class="page-title">Services</h1>
+				<article class="post">
+					<div class="row entry-content">
+						</br>
+						</br>
+						</br>
+						<center><h1>Under Review!</h1></center>
+						<!-- <div class="col-md-6" id="service-list">
+							We are able to provide the following types of services:
+						</div>
+						<div class="col-md-6" id="experience-list">
+							We have experience in building the following types of systems:
+						</div> -->
+					</div>
+				</article>
+			</main>
+	    </script>
+	    <script type="text/html" id="about-us">
+	    	<!-- <main class="col-md-12">
+				<h1 class="page-title">About Me</h1>
+				<article class="post">
+					<div class="entry-content clearfix">
+						<figure class="img-responsive-center">
+							<img class="img-responsive" src="img/me.jpg" alt="Developer Image">
+						</figure>
+						<p>Responsive web design offers us a way forward, finally allowing us to design for the ebb and flow of things. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly.</p>
+						<p>Responsive web design offers us a way forward, finally allowing us to design for the ebb and flow of things. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly.</p>
+						<div class="height-40px"></div>
+						<h2 class="title text-center">Social</h2>
+						<ul class="social">
+							// <li class="facebook"><a href="#"><span class="ion-social-facebook"></span></a></li>
+							<li class="twitter"><a href="twitter.com/pitsolu"><span class="ion-social-twitter"></span></a></li>
+							// <li class="tumblr"><a href="#"><span class="ion-social-tumblr"></span></a></li>
+						</ul>
+					</div>
+				</article>
+			</main> -->
+	    </script>
+	    <script type="text/html" id="contact-us">
+	    	<main class="col-md-12">
+				<h1 class="page-title">Contact</h1>
+				<article class="post">
+					<div class="entry-content clearfix">
+						<span class="contact-form">
+							<div class="row">
+								<div class="col-md-6 col-md-offset-3">
+									<input type="text" id="name" name="name" placeholder="Name" required>
+									<input type="email" id="email" name="email" placeholder="Email" required>
+									<input type="text" id="subject" name="subject" placeholder="Subject" required>
+									<textarea name="message" id="message" rows="7" placeholder="Your Message" required></textarea>
+									<button id="send" class="btn-send btn-5 btn-5b ion-ios-paperplane"><span>Talk to us</span></button>
+								</div>
+							</div>	<!-- row -->
+						</span>
+					</div>
+				</article>
+			</main>
+	    </script>
+	    <script type="text/html" id="adaptive-vs-responsive-preview">
+	    	<!-- <article class="post post-1">
+				<header class="entry-header">
+					<h1 class="entry-title">
+						<a href="single.html">Adaptive Vs. Responsive Layouts And Optimal Text Readability</a>
+					</h1>
+					<div class="entry-meta">
+						<span class="post-category"><a href="#">Web Design</a></span>
+
+						<span class="post-date"><a href="#"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">February 2, 2013</time></a></span>
+
+						<span class="post-author"><a href="#">Albert Einstein</a></span>
+
+						<span class="comments-link"><a href="#">4 Comments</a></span>
+					</div>
+				</header>
+				<div class="entry-content clearfix">
+					<p>Responsive web design offers us a way forward, finally allowing us to design for the ebb and flow of things. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly.</p>
+					<div class="read-more cl-effect-14">
+						<a href="single.html" class="more-link">Continue reading <span class="meta-nav">→</span></a>
+					</div>
+				</div>
+			</article> -->
+	    </script>
+	    <script type="text/html" id="who-we-are">
+	    	<main class="col-md-8">
+			    <article class="post post-1">
+					<header class="entry-header">
+						<h1 class="entry-title">Pitsolu | Technology</h1>
+						<div class="entry-meta">
+							<span class="post-category"><a href="#">Introduction</a></span>
+
+							<span class="post-date">
+								<a href="#"><time class="entry-date">January 16, 2016</time></a>
+							</span>
+
+							<span><a href="#">&nbsp;The Moderator</a></span>
+
+							<!--<span class="comments-link"><a href="#">4 Comments</a></span>-->
+						</div>
+					</header>
+					<div class="entry-content clearfix">
+						<ul class="social">
+							<li class="twitter" title="twitter"><a target="_blank" href="https://twitter.com/pitsolu"><span class="ion-social-twitter"></span></a></li>
+							<li class="twitter" title="github"><a target="_blank" href="https://github.com/pitsolu"><span class="ion-social-github"></span></a></li>
+						</ul>
+						<center><p><b>Changes coming soon!</b></br></br>
+										That reflect a strong belief in:</br>
+										1stly, values of <b>#democracy</b>;</br> 
+										2ndly, how they facilitate for <b>#capitalism</b>;</br>
+										3rdly, how <b>#tech</b>nology propels them;</br>
+										and lastly, how to safeguard them
+										(<b>#security</b> &amp; <b>#audit</b>)</br>
+									</p></center>
+						<!--<p>Given our experience and expertise in commercial web development, we believe we can offer a unique and superior service to business owners, in comparison to what is currently available.</p>
+						<p>The demand and growth rate for software development and marketing services in the small business market is at an all time high and shows no sign of slowing anytime soon. Even more astonishing is the fact that very few software development companies have taken advantage of the opportunity, as there are no dominating participants in this huge market.</p>
+						<p>We believe the reason for this virtually untapped market is due to expensive project costs, the highest profit margins in software development today are in servicing large and medium sized corporations. We have developed a system that dramatically reduces steep project costs and henceforth will allow us to offer the same high-end software development services as larger companies receive at a much lower cost to the client.</p>
+						-->
+					</div>
+				</article>
+			</main>
+	    </script>
+	    <script type="text/html" id="adaptive-vs-responsive-article">
+	    	<!-- <main class="col-md-8">
+			    <article class="post post-1">
+					<header class="entry-header">
+						<h1 class="entry-title">Adaptive Vs. Responsive Layouts And Optimal Text Readability</h1>
+						<div class="entry-meta">
+							<span class="post-category"><a href="#">Web Design</a></span>
+
+							<span class="post-date"><a href="#"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">February 2, 2013</time></a></span>
+
+							<span class="post-author"><a href="#">Albert Einstein</a></span>
+
+							<span class="comments-link"><a href="#">4 Comments</a></span>
+						</div>
+					</header>
+					<div class="entry-content clearfix">
+						<p>Responsive web design offers us a way forward, finally allowing us to design for the ebb and flow of things. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly.</p>
+					</div>
+				</article>
+			</main> -->
+	    </script>
+	</head>
+
+	<body>
+		<div class="container">	
+			<nav id="main-nav" class="navigation overflow">
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#blog">Blog</a></li>
+					<li><a href="#dev-blog">Dev Blog</a></li>
+					<li><a href="#services">Services</a></li>
+					<!-- <li><a href="#portfolio">Portfolio</a></li> -->
+					<li><a href="#contact-us">Contact</a></li>
+				</ul>
+			</nav>
+			<header id="site-header">
+				<div class="row">
+					<div class="col-md-4 col-sm-5 col-xs-8">
+						<div class="logo">
+							<!-- <h1><a href="index.html"><b>Black</b> &amp; White</a></h1> -->
+							<h1><a target="_blank" href="https://github.com/pitsolu">&lt;Pitsolu&#x2F;&gt;</a></h1>
+						</div>
+					</div><!-- col-md-4 -->
+					<div class="col-md-8 col-sm-7 col-xs-4">
+						<nav class="main-nav" role="navigation">
+							<div class="navbar-header">
+  								<button type="button" id="trigger-overlay" class="navbar-toggle">
+    								<span class="ion-navicon"></span>
+  								</button>
+							</div>
+
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  								<ul class="nav navbar-nav navbar-right">
+    								<li class="cl-effect-11"><a href="#home" data-hover="Home">Home</a></li>
+    								<li class="cl-effect-11"><a href="#blog" data-hover="Blog">Blog</a></li>
+    								<li class="cl-effect-11"><a href="#dev-blog" data-hover="......&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"><sup>Dev</sup> Blog</a></li>
+    								<li class="cl-effect-11"><a href="#services" data-hover="Services">Services</a></li>
+    								<!-- <li class="cl-effect-11"><a href="#portfolio" data-hover="Portfolio">Portfolio</a></li> -->
+    								<li class="cl-effect-11"><a href="#contact-us" data-hover="Contact">Contact</a></li>
+  								</ul>
+							</div><!-- /.navbar-collapse -->
+						</nav>
+						<!-- <div id="header-search-box">
+							<a id="search-menu" href="#"><span id="search-icon" class="ion-ios-search-strong"></span></a>
+							<div id="search-form" class="search-form">
+								<form role="search" method="get" id="searchform" action="#">
+									<input type="search" placeholder="Search" required>
+									<button type="submit"><span class="ion-ios-search-strong"></span></button>
+								</form>				
+							</div>
+						</div> -->
+					</div><!-- col-md-8 -->
+				</div>
+			</header>
+		</div>
+
+		<div class="content-body">
+			<div class="container">
+				<div class="row">
+					<!-- <main class="col-md-8"></main> -->
+					<!-- <main class="col-md-8">
+						
+					</main> -->
+					<aside class="col-md-4" id="left-bar">
+						<div class="widget widget-recent-posts" id="recent-posts">		
+							<h3 class="widget-title">Recent Posts</h3>		
+							<!-- <ul>
+								<li><a target="_blank" href="blog/2016040500.html">Hospitality Top Digital Marketing Trends</a></li>
+								<li><a target="_blank" href="blog/2016032200.html">Gain Traffic Through Blogging</a></li>
+								<li><a target="_blank" href="blog/2016032201.html">Brand Story Most Valuable Marketing Tool</a></li>
+								<li><a href="#home">Pitsolu | Technology Startup </a></li>
+							</ul> -->
+						</div>
+						<div class="widget widget-archives" id="archives-posts">		
+							<h3 class="widget-title">Archives</h3>		
+							<ul class="none">
+								<li>
+									<a href="#">None</a>
+								</li>
+								<!-- <li>
+									<a href="#">November 2014</a>
+								</li>
+								<li>
+									<a href="#">September 2014</a>
+								</li>
+								<li>
+									<a href="#">January 2013</a>
+								</li> -->
+							</ul>
+						</div>
+
+						<div class="widget widget-category" id="category-posts">		
+							<h3 class="widget-title">Category</h3>		
+							<ul class="none">
+								<li>
+									<a href="#">None</a>
+								</li>
+								<!-- <li>
+									<a href="#">Web Design</a>
+								</li>
+								<li>
+									<a href="#">Web Development</a>
+								</li>
+								<li>
+									<a href="#">SEO</a>
+								</li> -->
+							</ul>
+						</div>
+					</aside>
+				</div>
+			</div>
+		</div>
+		<footer id="site-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<!-- <p class="copyright">&copy; 2014 ThemeWagon.com</p> -->
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Mobile Menu -->
+		<!-- <div class="overlay overlay-hugeinc">
+			<button type="button" class="overlay-close"><span class="ion-ios-close-empty"></span></button>
+			<nav>
+				<ul>
+					<li><a href="#home">Home</a></li> -->
+					<!-- <li><a href="#blog">Blog</a></li> -->
+					<!-- <li><a href="#about-us">About</a></li> -->
+					<!-- <li><a href="#contact-us">Contact</a></li>
+				</ul>
+			</nav>
+		</div> -->
+
+		<!--<script src="js/classie.js"></script>-->
+		<script src="js/script.js"></script>
+
+	</body>
+</html>
