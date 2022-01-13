@@ -1,5 +1,5 @@
-app.controller("blogsController", ["$scope", "$http", "$stateParams", "blogsService", 
-	function($scope, $http, $stateParams, blogsService){
+app.controller("blogsController", ["$scope", "$state", "$http", "$stateParams", "blogsService", 
+	function($scope, $state, $http, $stateParams, blogsService){
 
 	$scope.blog_type = $stateParams.type
 

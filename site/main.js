@@ -103,7 +103,7 @@ app.config(['$stateProvider',
 
         url:'/blog/:type/:blog',
         templateUrl : "blog.html",
-        controller:"blogController"
+        controller:"xController"
     })
     .state('blogs', {
 
@@ -123,27 +123,16 @@ app.config(['$stateProvider',
 
 app.run(function($rootScope, $ajax, $state, $transitions, remoteUrl){
 
-    // $ajax({ 
+    // Promise.all([
 
-    //     url: "/ref/footer",
-    //     type:"POST"
+    //     $ajax({method:"GET", url: "/docs/articles.json"}),
+    //     $ajax({method:"GET", url: "/docs/articles-dev.json"})
+    // ])
+    // .then(function(values){
+
+    //     $rootScope.blogs = values[0]
+    //     $rootScope.blogs_dev = values[1]
     // })
-    // .done(function(data){
-
-    //     $rootScope.services = data.services
-    //     $rootScope.about = data.about
-    //     $rootScope.blogs = data.blogs
-    //     $rootScope.contacts = data.contacts
-    //     $rootScope.tags = data.tags
-    // })
-    // .catch(function(err){
-
-    //     console.log("Something went wrong!")
-    // });
-
-
-
-
 
     $transitions.onStart({}, function (trans) {
 
@@ -160,10 +149,5 @@ app.run(function($rootScope, $ajax, $state, $transitions, remoteUrl){
             $rootScope.hide_leftbar = false
             $rootScope.col_md = "col-md-8"
         }
-
-        // var anchor = $("a[href='#!/" + $state.current.name + "']");
-        // var parent = anchor.parent();
-        // parent.addClass("active")
-        // parent.siblings().removeClass("active");
     });
 });

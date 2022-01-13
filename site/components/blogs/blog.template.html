@@ -1,0 +1,19 @@
+<!--  Essential META Tags -->
+<meta property="og:title" content="{{meta.title}}">
+<meta property="og:type" content="{{meta.content_type}}" />
+<meta property="og:image" content="{{meta.image}}">
+<meta property="og:url" content="{{meta.url}}">
+<meta name="twitter:card" content="{{meta.large_image}}">
+
+<!--  Non-Essential, But Recommended -->
+<meta property="og:description" content="{{meta.descr}}">
+<meta property="og:site_name" content="Pitsolu">
+<meta name="twitter:image:alt" content="{{meta.alt_text_img}}">
+
+<!--  Non-Essential, But Required for Analytics -->
+<meta property="fb:app_id" content="{{meta.fb_app_id}}" />
+<meta name="twitter:site" content="@pitsolu">
+<h1 class="page-title">Blog</h1>
+<article class="post">
+	<div class="row entry-content" btf-markdown ng-include="blog"></div>
+</article>

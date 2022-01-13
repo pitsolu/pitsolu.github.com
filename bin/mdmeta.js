@@ -5,22 +5,15 @@ var fs = require("fs");
 const path = require('path');
 const proc = require("process");
 
-var file = proc.argv[2];
+var file_type = proc.argv[2];
 
 var dir = "docs/articles";
-var jsonfile = "docs/articles/meta/all.json";
-
-if(file == "dev"){
-
+if(file_type == "dev")
   var dir = "docs/articles-dev";
-  var jsonfile = "docs/articles-dev/meta/all.json";
-}
 
 const dirp = path.join(__dirname, '../'.concat(dir));
 
 const files = fs.readdirSync(dirp).filter(file => path.extname(file) === '.md');
-
-var articles = []
 
 files.forEach(function(file){
           
@@ -31,16 +24,18 @@ files.forEach(function(file){
     var title = xpath.select("string(//h1[1])", doc)
     var date = xpath.select("string(p[last()])", doc)
 
-    articles.push({
+    var article_json = {
 
       "title":title,
       "date":date,
       "file":file
-    })
+    }
+
+    var meta_dir = dirp.concat("/meta/".concat(file.replace(".md",".json")))
 
     try{
 
-      fs.writeFileSync(jsonfile, JSON.stringify(articles, null, 4))
+      fs.writeFileSync(meta_dir, JSON.stringify(article_json, null, 4))  
     }
     catch(err){
 

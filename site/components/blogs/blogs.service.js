@@ -2,9 +2,9 @@ app.service("blogsService", ["$http","$ajax","$q", function($http, $ajax, $q){
 
 	this.get = function(type){
 
-		var url = "/docs/articles.json"
+		var url = "/docs/articles/meta/all.json"
 		if(type == "dev")
-			url = "/docs/articles-dev.json"
+			url = "/docs/articles-dev/meta/all.json"
 
 		var deferred = $q.defer();
 
