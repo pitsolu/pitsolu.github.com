@@ -103,7 +103,7 @@ app.config(['$stateProvider',
 
         url:'/blog/:type/:blog',
         templateUrl : "blog.html",
-        controller:"xController"
+        controller:"blogController"
     })
     .state('blogs', {
 

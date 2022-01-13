@@ -1,4 +1,4 @@
-app.controller("xController", ["$scope", "$http", "$state", "$stateParams", "$location", "blogService",
+app.controller("blogController", ["$scope", "$http", "$state", "$stateParams", "$location", "blogService",
 	function($scope, $http, $state, $stateParams, $location, blogService){
 
 		// console.log($location)
