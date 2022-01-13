@@ -51,6 +51,8 @@
 	    <script src="site/components/blogs/blogs.service.js"></script>
 	    <script src="site/components/blogs/blog.controller.js"></script>
 	    <script src="site/components/blogs/blogs.controller.js"></script>
+	    <script src="site/components/docs/doc.controller.js"></script>
+	    <script src="site/components/docs/docs.controller.js"></script>
 	    <!-- site components -->
 	    <script type="text/ng-template" charset="utf-8" id="portfolio.html">
 			<!--
@@ -244,6 +246,26 @@
 	    		</div>
 	    	</article>
 	    </script>
+	    <script type="text/ng-template" id="doc.html">
+	    	<!-- <h1 class="page-title">{{title}}</h1> -->
+	    	<article style="padding-right:200px; padding-left: 200px;">
+	    		<div class="row entry-content" btf-markdown ng-include="blog"></div>
+	    	</article>
+	    </script>
+	    <script type="text/ng-template" id="docs.html">
+	    	<center><h3>{{title}}</h3></center>
+	    	<div class="row justify-content-center">
+	    		<div class="col-auto blogs" style="padding-right: 300px;padding-left: 300px;">
+	    		  <table class="table table-responsive">
+	    			<tr ng-repeat="doc in docs">
+	    				<td style="text-align: center;">
+	    					<a href="#!/dev/docs/{{doc}}">{{doc}}</a>
+	    				</td>
+	    			</tr>
+	    		  </table>
+	    		</div>
+	    	</div>
+	    </script>
 	</head>
 
 	<body>
@@ -253,6 +275,7 @@
 					<li><a href="#!/home">Home</a></li>
 					<li><a href="#!/blogs/news">Blogs</a></li>
 					<li><a href="#!/blogs/dev">Dev Blogs</a></li>
+					<li><a href="#!/docs">Dev Docs</a></li>
 					<li><a href="#!/services">Services</a></li>
 					<li><a href="#!/contacts">Contact</a></li>
 				</ul>
@@ -283,6 +306,9 @@
     								</li>
     								<li class="cl-effect-11">
     									<a href="#!/blogs/dev" data-hover="Dev:Blogs">Dev:Blogs</a>
+    								</li>
+    								<li class="cl-effect-11">
+    									<a href="#!/docs" data-hover="Dev:Docs">Dev:Docs</a>
     								</li>
     								<li class="cl-effect-11">
     									<a href="#!/services" data-hover="Services">Services</a>

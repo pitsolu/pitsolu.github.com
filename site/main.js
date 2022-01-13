@@ -111,12 +111,18 @@ app.config(['$stateProvider',
         templateUrl : "blogs.html",
         controller:"blogsController"
     })
-    // .state('research', {
+    .state('dev', {
 
-        // url:'/research',
-        // templateUrl : "research.html",
-        // controller: "researchController"
-    // })
+        url:'/dev/docs/:name',
+        templateUrl : "doc.html",
+        controller:"docController"
+    })
+    .state('docs', {
+
+        url:'/docs',
+        templateUrl : "docs.html",
+        controller:"docsController"
+    })
 
     $urlRouterProvider.otherwise('/');
 }])
