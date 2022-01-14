@@ -157,3 +157,20 @@ div#site-header{
 	padding-left: 150px;
 	padding-right: 150px;
 }
+
+.dev-docs caption{
+
+	color: black;
+	font-weight: bold;
+}
+
+.dev-docs a{
+
+	color: blue;
+}
+
+.dev-docs a:hover{
+
+	color: darkblue;
+	font-weight: bold;
+}

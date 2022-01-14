@@ -26,6 +26,9 @@
   		<script src="bower_components/showdown/src/showdown.js"></script>
   		<script src="bower_components/angular-markdown-directive/markdown.js"></script>
   		<!-- endbower -->
+		<script src="bower_components/showdown/compressed/extensions/github.min.js"></script>
+		<script src="bower_components/showdown/compressed/extensions/twitter.min.js"></script>
+		<script src="bower_components/showdown/compressed/extensions/prettify.min.js"></script>
 	    <!-- js -->
 	    <script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -134,14 +137,14 @@
 	    	<meta property="fb:app_id" content="{{meta.fb_app_id}}" />
 	    	<meta name="twitter:site" content="@pitsolu">
 	    	<h1 class="page-title">Blog</h1>
-	    	<article class="post">
-	    		<div class="row entry-content" btf-markdown ng-include="blog"></div>
+	    	<article>
+	    		<div class="row entry-content clearfix" btf-markdown ng-include="blog"></div>
 	    	</article>
 	    </script>
 	    <script type="text/ng-template" id="blogs.html">
 	    	<h1 class="page-title">{{title}}</h1>
 	    	<div class="row justify-content-center">
-	    		<div class="col-auto blogs">
+	    		<div class="col-md-8 col-md-offset-2 blogs">
 	    		  <table class="table table-responsive">
 	    			<tr ng-repeat="blog in blogs">
 	    				<td>{{blog.date}}</td>
@@ -249,22 +252,24 @@
 	    <script type="text/ng-template" id="doc.html">
 	    	<!-- <h1 class="page-title">{{title}}</h1> -->
 	    	<article style="padding-right:200px; padding-left: 200px;">
-	    		<div class="row entry-content" btf-markdown ng-include="blog"></div>
+	    		<div class="row entry-content clearfix" btf-markdown ng-include="blog"></div>
 	    	</article>
 	    </script>
 	    <script type="text/ng-template" id="docs.html">
-	    	<center><h3>{{title}}</h3></center>
-	    	<div class="row justify-content-center">
-	    		<div class="col-auto blogs" style="padding-right: 300px;padding-left: 300px;">
-	    		  <table class="table table-responsive">
-	    			<tr ng-repeat="doc in docs">
-	    				<td style="text-align: center;">
-	    					<a href="#!/dev/docs/{{doc}}">{{doc}}</a>
+	    	<div class="row">
+	    		<div class="col-md-6 col-md-offset-3">
+	    		  <table class="table table-responsive dev-docs" ng-repeat="doc in docs">
+	    		  	<caption>{{doc.title}}</caption>
+	    			<tr ng-repeat="dev in doc.list">
+	    				<td>
+	    					<a href="#!/dev/docs/{{dev.name}}">{{dev.name}}</a>
 	    				</td>
+	    				<td>{{dev.descr}}</td>
 	    			</tr>
 	    		  </table>
 	    		</div>
 	    	</div>
+	    	
 	    </script>
 	</head>
 

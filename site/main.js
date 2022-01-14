@@ -64,6 +64,14 @@ app.provider("$ajax", function() {
     this.$get = Ajax;
 });
 
+// app.config(['markdownConverterProvider', function (markdownConverterProvider) {
+//   // options to be passed to Showdown
+//   // see: https://github.com/coreyti/showdown#extensions
+//   markdownConverterProvider.config({
+//     extensions: ['prettify', 'github', 'twitter']
+//   });
+// }])
+
   
 app.factory("$dfd", Dfd);
 app.value("remoteUrl", "http://"+window.location.hostname+":8081");
@@ -74,9 +82,16 @@ app.config(['$stateProvider',
             '$urlRouterProvider', 
             '$httpProvider', 
             '$qProvider',
-            function($stateProvider, $urlRouterProvider, $httpProvider, $qProvider){
+            'markdownConverterProvider',
+            function($stateProvider, $urlRouterProvider, $httpProvider, 
+                        $qProvider, markdownConverterProvider){
 
     $qProvider.errorOnUnhandledRejections(false);
+
+    markdownConverterProvider.config({
+
+        extensions: ['github']
+    });
 
     $stateProvider
     .state('contacts', {

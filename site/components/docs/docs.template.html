@@ -1,11 +1,12 @@
-<center><h3>{{title}}</h3></center>
-<div class="row justify-content-center">
-	<div class="col-auto blogs" style="padding-right: 300px;padding-left: 300px;">
-	  <table class="table table-responsive">
-		<tr ng-repeat="doc in docs">
-			<td style="text-align: center;">
-				<a href="#!/dev/docs/{{doc}}">{{doc}}</a>
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+	  <table class="table table-responsive dev-docs" ng-repeat="doc in docs">
+	  	<caption>{{doc.title}}</caption>
+		<tr ng-repeat="dev in doc.list">
+			<td>
+				<a href="#!/dev/docs/{{dev.name}}">{{dev.name}}</a>
 			</td>
+			<td>{{dev.descr}}</td>
 		</tr>
 	  </table>
 	</div>
