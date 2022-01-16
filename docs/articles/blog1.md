@@ -1,5 +1,7 @@
 ## GDPR legal advice
 
+[Share on Twitter](http://twitter.com/share?text=GDPR%20via%20@pitsolu&url=https://pitsolu.github.io/static/redirects/articles/blog1.md.html)
+
 Lawyers give their top tips for GDPR preparation
 ===
 
