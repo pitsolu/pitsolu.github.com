@@ -1,6 +1,8 @@
 Fake News
 ===
 
+[Share on Twitter](http://twitter.com/share?text=Fake%20News%20via%20@pitsolu&url=https://pitsolu.github.io/static/redirects/articles/blog4.md.html)
+
 ### Fake Content!
 You may feel hoodwinked by some content marketers as I am. Funny thing ... I'm a content marketer myself.
 

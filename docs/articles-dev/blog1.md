@@ -1,3 +1,7 @@
+## Blockchain
+
+[Share on Twitter](http://twitter.com/share?text=Blockchain%20via%20@pitsolu&url=https://pitsolu.github.io/static/redirects/articles-dev/blog1.md.html)
+
 Block weight derives from difficulty
 ===
 

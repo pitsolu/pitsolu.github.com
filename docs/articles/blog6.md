@@ -1,5 +1,7 @@
 ## Milestone Internet | Hospitality Industry
 
+[Share on Twitter](http://twitter.com/share?text=Branding%20Hospitality%20via%20@pitsolu&url=https://pitsolu.github.io/static/redirects/articles/blog6.md.html)
+
 Top Digital Marketing Trends for the Hospitality Industry
 ===
 

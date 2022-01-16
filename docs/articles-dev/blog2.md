@@ -1,4 +1,9 @@
-# Process of creating a block on the blockchain?
+## Blockchain
+
+[Share on Twitter](http://twitter.com/share?text=Blockchain%202%20via%20@pitsolu&url=https://pitsolu.github.io/static/redirects/articles-dev/blog2.md.html)
+
+Process of creating a block on the blockchain?
+===
 
 When miners try to compute a block, they pick all transactions that they want to be added in the block, plus one coinbase (generation) transaction to their address. They may include any transaction they want to form a tree of transactions later hashed into the merkle root and referenced into the block's header.
 

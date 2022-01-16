@@ -1,5 +1,7 @@
 ## Momentology | Brand Story
 
+[Share on Twitter](http://twitter.com/share?text=Branding%20via%20@pitsolu&url=https://pitsolu.github.io/static/redirects/articles/blog5.md.html)
+
 5 Reasons A Brand Story Is Your Most Valuable Marketing Tool
 ===
 

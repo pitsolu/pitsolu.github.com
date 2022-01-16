@@ -1,4 +1,9 @@
-# What is the Merkle root?
+## Blockchain
+
+[Share on Twitter](http://twitter.com/share?text=Blockchain%202%20via%20@pitsolu&url=https://pitsolu.github.io/static/redirects/articles-dev/blog3.md.html)
+
+What is the Merkle root?
+===
 
 ![Merkel Tree](../images/merkle-tree.png)
 

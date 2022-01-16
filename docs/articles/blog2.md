@@ -1,5 +1,7 @@
 ## Surveillance | Privacy & Security
 
+[Share on Twitter](http://twitter.com/share?text=Surveillance%20via%20@pitsolu&url=https://pitsolu.github.io/static/redirects/articles/blog2.md.html)
+
 Age of surveillance
 ===
 Disclaimer: This is a mashup of whole and sections of articles and reports that are indictated in links to original content in references and sources. References and sources are listed at the bottom of the page. Context has been maintained as much as possible. Any inaccurate information should be attributed to original authors.

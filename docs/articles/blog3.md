@@ -1,5 +1,7 @@
 ## Social Media
 
+[Share on Twitter](http://twitter.com/share?text=Quora%20via%20@pitsolu&url=https://pitsolu.github.io/static/redirects/articles/blog3.md.html)
+
 Facebook should acquire Quora
 ===
 
