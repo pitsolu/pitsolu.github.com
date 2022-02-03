@@ -149,6 +149,11 @@ app.run(function($rootScope, $ajax, $state, $transitions, remoteUrl){
         $("#main-nav").show();
     });
 
+    $("#main-nav").click(function(){
+
+       $("#main-nav").hide(); 
+    })
+
     // Promise.all([
 
     //     $ajax({method:"GET", url: "/docs/articles.json"}),
