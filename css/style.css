@@ -152,18 +152,6 @@ div#site-header{
 	font-weight: bold;
 }
 
-/*@media only screen and (max-width: 600px){*/
-
-	/*.post {*/
-
-		/*padding-left: 150px;*/
-		/*padding-right: 150px;*/
-		
-		/*padding-right:200px; */
-		/*padding-left: 200px;*/
-	/*}*/
-/*}*/
-
 .dev-docs caption{
 
 	color: black;
@@ -184,5 +172,5 @@ div#site-header{
 .navbar-nav li a{
 
 	color: white;
-	font-weight: bold;
+	/*font-weight: bold;*/
 }
