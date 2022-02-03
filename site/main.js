@@ -144,6 +144,11 @@ app.config(['$stateProvider',
 
 app.run(function($rootScope, $ajax, $state, $transitions, remoteUrl){
 
+    $("#trigger-overlay").click(function(){
+
+        $("#main-nav").show();
+    });
+
     // Promise.all([
 
     //     $ajax({method:"GET", url: "/docs/articles.json"}),
