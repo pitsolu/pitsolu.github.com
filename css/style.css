@@ -152,11 +152,17 @@ div#site-header{
 	font-weight: bold;
 }
 
-.post {
+/*@media only screen and (max-width: 600px){*/
 
-	padding-left: 150px;
-	padding-right: 150px;
-}
+	/*.post {*/
+
+		/*padding-left: 150px;*/
+		/*padding-right: 150px;*/
+		
+		/*padding-right:200px; */
+		/*padding-left: 200px;*/
+	/*}*/
+/*}*/
 
 .dev-docs caption{
 
