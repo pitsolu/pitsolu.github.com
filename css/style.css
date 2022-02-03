@@ -174,3 +174,9 @@ div#site-header{
 	color: darkblue;
 	font-weight: bold;
 }
+
+.navbar-nav li a{
+
+	color: white;
+	font-weight: bold;
+}
