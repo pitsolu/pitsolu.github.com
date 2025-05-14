@@ -11,7 +11,7 @@ It is to note that for a block to be accepted by the network it needs to contain
 
 After having a valid merkle root they build the block's header:
 
-![Block Header Contents](../images/block-header.png)
+![Block Header Contents](../../images/block-header.png)
 See more here to learn more on how to build the header.
 
 Then this where your miner enters the game. It starts with the nonce at 0, hash (sha-256 2x) the block's header and then check if the hash in under the current target (if you are on a pool the share target). If not it increments the nonce and hash again. If the hash is under the current target YOU FOUND A BLOCK, you then transfer your block's header and the associated transactions' tree and the network accepts it. Because you had a coinbase transaction in your block paying to your bitcoin address those bitcoin then becomes yours.
